@@ -1,0 +1,12 @@
+<div class="contenedor">
+    <h2>¡Hola, {{ nombre | titlecase }}! 👋</h2>
+    <h2>¿A qué hora te viene bien?</h2>
+
+    <!-- Un checkbox por cada franja horaria -->
+    <label *ngFor="let hora of horas" class="opcion">
+        <input type="checkbox" [(ngModel)]="hora.marcado" />
+        {{ hora.nombre }}
+    </label>
+
+    <button (click)="siguiente()">Siguiente</button>
+</div>

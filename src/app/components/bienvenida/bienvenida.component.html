@@ -1,0 +1,10 @@
+<div class="contenedor">
+    <h2>Introduce tu nombre para continuar</h2>
+
+    <div class="fila-input">
+        <input type="text" [(ngModel)]="nombre" placeholder="Tu nombre"/>
+        <button (click)="comprobarNombre()">Continuar</button>
+    </div>
+
+    <p class="error" *ngIf="errorNombre">Nombre no reconocido o no admitido. Inténtalo de nuevo.</p>
+</div>

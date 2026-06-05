@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <h2>¡Hola, {{ nombre | titlecase }}! 👋</h2>
+    <p>¿Qué plan te apetece?</p>
+
+    <label *ngFor="let plan of planes" class="opcion">
+        <input type="checkbox" [(ngModel)]="plan.marcado"/>
+        {{ plan.nombre }}
+    </label>
+
+    <button (click)="siguiente()">Siguiente</button>
+</div>

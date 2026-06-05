@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <h2>¡Hola, {{ nombre | titlecase }}!</h2>
+    <p>¿Dónde prefieres quedar?</p>
+
+    <label *ngFor="let zona of zonas" class="opcion">
+        <input type="checkbox" [(ngModel)]="zona.marcado" />
+        {{ zona.nombre }}
+    </label>
+
+    <button (click)="siguiente()">Siguiente</button>
+</div>

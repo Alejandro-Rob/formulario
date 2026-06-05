@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables de color reutilizables en toda la app */
+:root {
+    --color-primario: #FF6B6B;     /* rojo-salmón */
+    --color-secundario: #FF8E72;   /* salmón-naranja */
+    --color-acento: #FFB347;       /* naranja suave */
+    --color-fondo: #FFF0EB;        /* fondo rosado muy claro */
+    --color-texto: #3D2B1F;        /* marrón oscuro para texto */
+}
+
+/* Reset básico y fuente general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

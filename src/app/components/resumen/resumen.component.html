@@ -1,0 +1,46 @@
+<div class="contenedor">
+    <!-- Pantalla de resumen antes de enviar -->
+    <ng-container *ngIf="!enviado">
+        <h2>Resumen, {{ nombre | titlecase }}</h2>
+        <p>Comprueba tus respuestas antes de enviar</p>
+
+        <div class="seccion">
+            <h3>📅 Día</h3>
+            <p>{{ dias.length ? dias.join(', ') : 'Ninguno seleccionado' }}</p>
+        </div>
+
+        <div class="seccion">
+            <h3>🕐 Hora</h3>
+            <p>{{ horas.length ? horas.join(', ') : 'Ninguna seleccionada' }}</p>
+        </div>
+
+        <div class="seccion">
+            <h3>🎉 Plan</h3>
+            <p>{{ plan.length ? plan.join(', ') : 'Ninguno seleccionado' }}</p>
+        </div>
+
+        <div class="seccion">
+            <h3>🎲 Plan secundario</h3>
+            <p>{{ planSecundario.length ? planSecundario.join(', ') : 'Ninguno seleccionado' }}</p>
+        </div>
+
+        <div class="seccion">
+            <h3>📍 Zona</h3>
+            <p>{{ zona.length ? zona.join(', ') : 'Ninguna seleccionada' }}</p>
+        </div>
+
+        <div class="botones">
+            <button class="btn-secundario" (click)="reiniciar()">No, empezar de nuevo</button>
+            <button (click)="enviar()" [disabled]="enviando">
+                {{ enviando ? 'Enviando...' : 'Sí, enviar' }}
+            </button>
+        </div>
+    </ng-container>
+
+    <!-- Pantalla de confirmación tras enviar -->
+    <ng-container *ngIf="enviado">
+        <h2>¡Gracias, {{ nombre | titlecase }}! 🎉</h2>
+        <p>Tus respuestas han sido enviadas correctamente.</p>
+        <p>Tú sabrás lo que haces :)</p>
+    </ng-container>
+</div>

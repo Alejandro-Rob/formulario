@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <h2>¡Hola, {{ nombre | titlecase }}! 👋</h2>
+    <h2>¿Qué día te viene bien?</h2>
+    <p>Elige cuándo quieres o elige varias y elijo yo al final</p>
+
+    <!-- Un checkbox por cada día -->
+    <label *ngFor="let dia of dias" class="opcion">
+        <input type="checkbox" [(ngModel)]="dia.marcado" />
+        {{ dia.nombre }}
+    </label>
+
+    <button (click)="siguiente()">Siguiente</button>
+</div>
