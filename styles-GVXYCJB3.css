@@ -1,0 +1,1 @@
+:root{--color-primario: #FF6B6B;--color-secundario: #FF8E72;--color-acento: #FFB347;--color-fondo: #FFF0EB;--color-texto: #3D2B1F}*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}body{background-color:var(--color-fondo);color:var(--color-texto);min-height:100vh;display:flex;justify-content:center;align-items:center}
